@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
-<body>
-    
+<img class="logo" src="image\LogoMakr_6XEEPa.png" alt="Logo">
+<h1 class="weekly-total">Weekly Budget:</h1>
 
-    <script src="./script.js"></script>
+<form class="budget">
+    <input type="text" id="budget" name="budget">
+    <label for="budget"></label>
+    <button>Submit</button>
+</form>
+
+<form class="purchases">
+    <select name="category" id="category">
+        <option value="" selected> Select Category</option>
+        <option value="food">Food</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="bills">Bills</option>
+        <option value="clothes">Clothes</option>
+    </select>
+    <input type="text" id="amount" name="amount" placeholder="Amount">
+    <label for="amount"></label>
+    <input type="text" id="description" name="description" placeholder="Description">
+    <label for="description"></label>
+    <button>Submit</button>
+</form>
+
+<div>
+    <p>Food: $0.00</p>
+    <p>Entertainment: $0.00</p>
+    <p>Bills: $0.00</p>
+    <p>Clothes: $0.00</p>
+</div>
+
+<nav>
+    <ul class="nav-list">
+        <li><a>About</a></li>
+        <li><a>Sign up</a></li>
+        <li>Help</li>
+    </ul>
+</nav>
+
+<script src="./script.js"></script>
 </body>
+
 </html>
