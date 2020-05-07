@@ -2,6 +2,44 @@
 body{
     margin:0;
 }
+.background-helper{
+    position: relative;
+}
+.background {
+    content:'';
+    background-image: url(./image/raining-dollarsign.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    object-fit: cover;
+    width:100vw;
+    height:100vh;
+    z-index:-1;
+    opacity: 0.5; /* Here is your opacity */
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .logo{
     width: 75px;
+    
+}
+.navigation{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 5px 10px 0 10px;
+    border-top: 2px solid;
+}
+a{
+    text-decoration: none;
+    color: unset;
 }
