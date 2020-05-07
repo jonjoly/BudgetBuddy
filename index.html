@@ -14,29 +14,33 @@
     <div class="main-container">
         <img class="logo" src="image\LogoMakr_6XEEPa.png" alt="Logo">
         <h1 class="weekly-total">Weekly Budget:</h1>
+        <p>$$$$</p>
+        <div class="form-container">
+            <form class="budget">
+                <h2 class="budget-title">Set your budget</h2>
+                <input type="text" id="budget" name="budget" placeholder="Enter budget">
 
-        <form class="budget">
-            <input type="text" id="budget" name="budget">
-            <label for="budget"></label>
-            <button>Submit</button>
-        </form>
+                <button>Submit</button>
+            </form>
 
-        <form class="purchases">
-            <select name="category" id="category">
-                <option value="" selected> Select Category</option>
-                <option value="food">Food</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="bills">Bills</option>
-                <option value="clothes">Clothes</option>
-            </select>
-            <input type="text" id="amount" name="amount" placeholder="Amount">
-            <label for="amount"></label>
-            <input type="text" id="description" name="description" placeholder="Description">
-            <label for="description"></label>
-            <button>Submit</button>
-        </form>
+            <form class="purchases-container">
+                <h2 class="purchase-title">Add a purchase</h2>
+                <select class="purchase" name="category" id="category">
+                    <option value="" selected> Select Category</option>
+                    <option value="food">Food</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="bills">Bills</option>
+                    <option value="clothes">Clothes</option>
+                </select>
+                <input class="purchase" type="text" id="amount" name="amount" placeholder="Amount">
 
+                <input class="purchase" type="text" id="description" name="description" placeholder="Description">
+
+                <button class="purchase">Submit</button>
+            </form>
+        </div>
         <div>
+            <h2>Spending tracker</h2>
             <p>Food: $0.00</p>
             <p>Entertainment: $0.00</p>
             <p>Bills: $0.00</p>
