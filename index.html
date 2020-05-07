@@ -12,40 +12,50 @@
     <div class="background-helper"></div>
     <div class="background"></div>
     <div class="main-container">
-        <img class="logo" src="image\LogoMakr_6XEEPa.png" alt="Logo">
+        <header class="desk-header">
+            <img class="logo" src="image\LogoMakr_6XEEPa.png" alt="Logo">
+            <nav class="navigation-desk">
+                <ul class="desk-list">
+                    <li class="desk-option"><a href="#">About</a></li>
+                    <li class="desk-option"><a href="#">Sign up</a></li>
+                    <li class="desk-option"><a href="#">Help</a></li>
+                </ul>
+        </header>
         <h1 class="weekly-total">Weekly Budget:</h1>
         <p>$$$$</p>
-        <div class="form-container">
-            <form class="budget">
-                <h2 class="budget-title">Set your budget</h2>
-                <input type="text" id="budget" name="budget" placeholder="Enter budget">
+        <section class="desk-container">
+            <div class="form-container">
+                <form class="budget">
+                    <h2 class="budget-title">Set your budget</h2>
+                    <input type="text" id="budget" name="budget" placeholder="Enter budget">
 
-                <button>Submit</button>
-            </form>
+                    <button>Submit</button>
+                </form>
 
-            <form class="purchases-container">
-                <h2 class="purchase-title">Add a purchase</h2>
-                <select class="purchase" name="category" id="category">
-                    <option value="" selected> Select Category</option>
-                    <option value="food">Food</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="bills">Bills</option>
-                    <option value="clothes">Clothes</option>
-                </select>
-                <input class="purchase" type="text" id="amount" name="amount" placeholder="Amount">
+                <form class="purchases-container">
+                    <h2 class="purchase-title">Add a purchase</h2>
+                    <select class="purchase" name="category" id="category">
+                        <option value="" selected> Select Category</option>
+                        <option value="food">Food</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="bills">Bills</option>
+                        <option value="clothes">Clothes</option>
+                    </select>
+                    <input class="purchase" type="text" id="amount" name="amount" placeholder="Amount">
 
-                <input class="purchase" type="text" id="description" name="description" placeholder="Description">
+                    <input class="purchase" type="text" id="description" name="description" placeholder="Description">
 
-                <button class="purchase">Submit</button>
-            </form>
-        </div>
-        <div>
-            <h2>Spending tracker</h2>
-            <p>Food: $0.00</p>
-            <p>Entertainment: $0.00</p>
-            <p>Bills: $0.00</p>
-            <p>Clothes: $0.00</p>
-        </div>
+                    <button class="purchase">Submit</button>
+                </form>
+            </div>
+            <div class="tracker">
+                <h2>Spending tracker</h2>
+                <p>Food: $0.00</p>
+                <p>Entertainment: $0.00</p>
+                <p>Bills: $0.00</p>
+                <p>Clothes: $0.00</p>
+            </div>
+        </section>
     </div>
     <nav class="navigation">
         <ul class="nav-list">
