@@ -16,28 +16,34 @@ let entertainmentTotal = document.querySelector(".entertainment-total");
 let billsTotal = document.querySelector(".bills-total");
 let clothesTotal = document.querySelector(".clothes-total");
 
+let currentFood = 0;
+let currentEntertainment = 0;
+let currentBills = 0;
+let currentClothes = 0;
+
 purchasesForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(purchasesForm);
-    let amount = data.get("amount");
-    let category = data.get("category")
+    let amount = Number(data.get("amount"));
+    let category = data.get("category");
 
     console.log(amount, category)
-
-
-
-
     if (category == "food") {
-        foodTotal.innerHTML = `$${amount}`
+        currentFood += amount;
+        foodTotal.innerHTML = `$${currentFood}`
     } else if (category == "entertainment") {
-        entertainmentTotal.innerHTML = `$${amount}`
+        currentEntertainment += amount;
+        entertainmentTotal.innerHTML = `$${currentEntertainment}`
     }
     else if (category == "bills") {
-        billsTotal.innerHTML = `$${amount}`
+        currentBills += amount;
+        billsTotal.innerHTML = `$${currentBills}`
     }
     else if (category == "clothes") {
-        clothesTotal.innerHTML = `$${amount}`
+        currentClothes += amount;
+        clothesTotal.innerHTML = `$${currentClothes}`
     }
     purchasesForm.reset();
     console.log(amount);
 })
+
