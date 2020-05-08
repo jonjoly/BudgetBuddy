@@ -58,4 +58,8 @@ purchasesForm.addEventListener("submit", (event) => {
     }
     // console.log(amount);
 })
+let popup = document.querySelector(".popup")
+popup.addEventListener("click", (e) => {
+    popup.style.display = "none"
+})
 
