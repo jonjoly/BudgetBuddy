@@ -57,6 +57,11 @@ a{
 .form-container{
     display: flex;
     flex-direction: column;
+    height:30vh;
+    width: 50vw;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, rgba(230,166,21,0.8), rgba(245,245,245,0.8));
+    padding: 10px;
     /* align-items: center; */
 }
 
@@ -112,9 +117,10 @@ a{
         align-items: center;
     }
     .popup-text{
-        background-color: rgb(245, 245, 245);
+        background-color: rgba(245, 245, 245,0.8);
         font-size: 20px;
-
+        padding: 10px;
+        border-radius: 25px;
     }
     
 
