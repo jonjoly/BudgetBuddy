@@ -33,7 +33,7 @@ purchasesForm.addEventListener("submit", (event) => {
     let category = data.get("category");
 
     // console.log(amount, category)
-    if (budget - amount > 0) {
+    if (budget - amount >= 0 && category != "selected") {
         if (category == "food") {
             currentFood += amount;
             foodTotal.innerHTML = `$${currentFood}`;
@@ -52,6 +52,12 @@ purchasesForm.addEventListener("submit", (event) => {
         budget -= amount;
         budgetTotal.innerHTML = `$${budget}`;
         purchasesForm.reset();
+    } else if (budget - amount >= 0 && category == "selected") {
+        let popupTwo = document.querySelector(".popup-two")
+        popupTwo.style.display = "flex"
+        popupTwo.addEventListener("click", (e) => {
+            popupTwo.style.display = "none"
+        })
     } else {
         let popup = document.querySelector(".popup")
         popup.style.display = "flex"
@@ -62,4 +68,3 @@ let popup = document.querySelector(".popup")
 popup.addEventListener("click", (e) => {
     popup.style.display = "none"
 })
-
