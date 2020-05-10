@@ -62,9 +62,36 @@ purchasesForm.addEventListener("submit", (event) => {
         let popup = document.querySelector(".popup")
         popup.style.display = "flex"
     }
-    // console.log(amount);
+    let description = data.get("description")
+    let items = document.createElement("li")
+    let foodList = document.querySelector(".food")
+    let enetertainmentList = document.querySelector(".entertainment")
+    let billsList = document.querySelector(".bills")
+    let clothesList = document.querySelector(".clothes")
+    if (category == "food") {
+        items.innerHTML = `${description} $${amount}`
+        console.log(items)
+        foodList.append(items)
+    } else if (category == "entertainment") {
+        items.innerHTML = `${description} $${amount}`
+        console.log(items)
+        enetertainmentList.append(items)
+    }
+    else if (category == "bills") {
+        items.innerHTML = `${description} $${amount}`
+        console.log(items)
+        billsList.append(items)
+    }
+    else if (category == "clothes") {
+        items.innerHTML = `${description} $${amount}`
+        console.log(items)
+        clothesList.append(items)
+    }
+
 })
+
 let popup = document.querySelector(".popup")
 popup.addEventListener("click", (e) => {
     popup.style.display = "none"
 })
+
