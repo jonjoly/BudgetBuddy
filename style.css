@@ -89,6 +89,7 @@ a{
     justify-content: space-between;
     height: 125px;
     padding-top: 10px;
+    background-image: linear-gradient(to bottom right, rgba(230,166,21,0.8), rgba(245,245,245,0.8));
     }
     .button{
         border-radius: 25px;
@@ -140,11 +141,20 @@ a{
         border-radius: 25px;
     }
     .lists{
-        /* display: none; */
+        display:none;
         background-color: #ffff;
         list-style-type: none;
         border-radius: 15px;
         padding: 5px;
+    }
+    .show-list{
+        display:block;
+    }
+
+    .category{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
     }
     
 
@@ -219,6 +229,7 @@ a{
         border: 1px solid lightgrey;
         border-radius: 10px;
         padding: 10px;
+
     }
     .tracker-content{
         display: flex;
