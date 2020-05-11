@@ -107,6 +107,17 @@ a:hover{
     input:focus, textarea{
         outline: none !important;
     }
+    /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
     p{
         text-align: left;
         padding-top: 10px;
@@ -147,10 +158,10 @@ a:hover{
     }
     .lists{
         display:none;
-        background-color: #ffff;
         list-style-type: none;
         border-radius: 15px;
         padding: 5px;
+        text-align: left;
     }
     .show-list{
         display:block;
