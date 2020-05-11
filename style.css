@@ -1,10 +1,13 @@
 /* css resets */
-body,h2,p{
+body,h1,h2,h3,p{
     margin:0;
     text-align: center;
 }
 .weekly-total{
     margin:0;
+}
+h1{
+    font-family: 'Press Start 2P', cursive, sans-serif;
 }
 .background-helper{
     position: relative;
@@ -50,14 +53,14 @@ a{
     color: unset;
     color:rgba(255, 255, 255, 0.5);
 }
-.a-hover{
+a:hover{
     color: #ffff;
 }
 
 .form-container{
     display: flex;
     flex-direction: column;
-    height:30vh;
+    height:225px;
     width: 50vw;
     border-radius: 25px;
     background-image: linear-gradient(to bottom right, rgba(230,166,21,0.8), rgba(245,245,245,0.8));
@@ -89,7 +92,6 @@ a{
     justify-content: space-between;
     height: 125px;
     padding-top: 10px;
-    background-image: linear-gradient(to bottom right, rgba(230,166,21,0.8), rgba(245,245,245,0.8));
     }
     .button{
         border-radius: 25px;
@@ -101,6 +103,9 @@ a{
         border-radius: 25px;
         padding: 5px;
         border-style: outset;
+    }
+    input:focus, textarea{
+        outline: none !important;
     }
     p{
         text-align: left;
@@ -163,6 +168,9 @@ a{
     .background{
         background-image:url(./image/raining-money.jpg);
     }
+    h1{
+        padding-left: 50px;
+    }
     p{
         text-align: left;
         font-size: 24px;
@@ -173,9 +181,15 @@ a{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 15px;
+    }
+    .title{
+        display: flex;
+        align-items: center;
     }
     .logo{
         padding-left: 10px;
+        padding-right: 15px;
     }
     .navigation-desk{
         display: flex;
@@ -195,6 +209,9 @@ a{
     a{
         text-decoration: none;
         color: unset;
+        color: rgba(0, 0, 0, 0.863);
+    }
+    a:hover{
         color: black;
     }
     .desk-container{
@@ -225,7 +242,7 @@ a{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: rgba(128, 128, 128, 0.4);
+        background-image: linear-gradient(to bottom right, rgba(230,166,21,0.8), rgba(245,245,245,0.8));
         border: 1px solid lightgrey;
         border-radius: 10px;
         padding: 10px;
