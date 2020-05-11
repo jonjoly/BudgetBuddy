@@ -2,17 +2,6 @@ let budgetTotal = document.querySelector(".budget-total");
 let budgetForm = document.querySelector(".budget-form");
 let budget = 0;
 
-budgetForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const data = new FormData(budgetForm);
-    budget = Number(data.get("budget"));
-    // console.log(budget);
-    budgetTotal.innerHTML = `$${budget}`
-    budgetForm.reset();
-    budgetForm.style.display = "none"
-})
-
-
 let purchasesForm = document.querySelector(".purchases-container");
 let foodTotal = document.querySelector(".food-total");
 let entertainmentTotal = document.querySelector(".entertainment-total");
@@ -25,6 +14,25 @@ let currentBills = 0;
 let currentClothes = 0;
 let amount = 0;
 
+let foodList = document.querySelector(".food")
+let entertainmentList = document.querySelector(".entertainment")
+let billsList = document.querySelector(".bills")
+let clothesList = document.querySelector(".clothes")
+
+let dropF = document.querySelector(".dropF");
+let dropE = document.querySelector(".dropE");
+let dropB = document.querySelector(".dropB");
+let dropC = document.querySelector(".dropC");
+
+budgetForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(budgetForm);
+    budget = Number(data.get("budget"));
+    // console.log(budget);
+    budgetTotal.innerHTML = `$${budget}`
+    budgetForm.reset();
+    budgetForm.style.display = "none"
+})
 
 purchasesForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -64,10 +72,7 @@ purchasesForm.addEventListener("submit", (event) => {
     }
     let description = data.get("description")
     let items = document.createElement("li")
-    let foodList = document.querySelector(".food")
-    let enetertainmentList = document.querySelector(".entertainment")
-    let billsList = document.querySelector(".bills")
-    let clothesList = document.querySelector(".clothes")
+
     if (category == "food") {
         items.innerHTML = `${description} $${amount}`
         console.log(items)
@@ -75,7 +80,7 @@ purchasesForm.addEventListener("submit", (event) => {
     } else if (category == "entertainment") {
         items.innerHTML = `${description} $${amount}`
         console.log(items)
-        enetertainmentList.append(items)
+        entertainmentList.append(items)
     }
     else if (category == "bills") {
         items.innerHTML = `${description} $${amount}`
@@ -94,4 +99,22 @@ let popup = document.querySelector(".popup")
 popup.addEventListener("click", (e) => {
     popup.style.display = "none"
 })
-
+let drops = document.querySelectorAll(".drops")
+const dropsFunc = () => {
+    drops.forEach(drop => {
+        drop.addEventListener("click", (event) => {
+            if (event.target.classList.contains("dropF")) {
+                foodList.classList.toggle("show-list")
+            } else if (event.target.classList.contains("dropE")) {
+                entertainmentList.classList.toggle("show-list")
+            }
+            else if (event.target.classList.contains("dropB")) {
+                billsList.classList.toggle("show-list")
+            }
+            else if (event.target.classList.contains("dropC")) {
+                clothesList.classList.toggle("show-list")
+            }
+        })
+    })
+}
+dropsFunc();
