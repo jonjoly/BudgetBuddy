@@ -29,7 +29,7 @@ budgetForm.addEventListener("submit", (event) => {
     const data = new FormData(budgetForm);
     budget = Number(data.get("budget"));
     // console.log(budget);
-    budgetTotal.innerHTML = `$${budget}`
+    budgetTotal.innerHTML = `$${budget.toFixed(2)}`
     budgetForm.reset();
     budgetForm.style.display = "none"
 })
@@ -44,21 +44,21 @@ purchasesForm.addEventListener("submit", (event) => {
     if (budget - amount >= 0 && category != "selected") {
         if (category == "food") {
             currentFood += amount;
-            foodTotal.innerHTML = `$${currentFood}`;
+            foodTotal.innerHTML = `$${currentFood.toFixed(2)}`;
         } else if (category == "entertainment") {
             currentEntertainment += amount;
-            entertainmentTotal.innerHTML = `$${currentEntertainment}`
+            entertainmentTotal.innerHTML = `$${currentEntertainment.toFixed(2)}`
         }
         else if (category == "bills") {
             currentBills += amount;
-            billsTotal.innerHTML = `$${currentBills}`
+            billsTotal.innerHTML = `$${currentBills.toFixed(2)}`
         }
         else if (category == "clothes") {
             currentClothes += amount;
-            clothesTotal.innerHTML = `$${currentClothes}`
+            clothesTotal.innerHTML = `$${currentClothes.toFixed(2)}`
         }
         budget -= amount;
-        budgetTotal.innerHTML = `$${budget}`;
+        budgetTotal.innerHTML = `$${budget.toFixed(2)}`;
         purchasesForm.reset();
     } else if (budget - amount >= 0 && category == "selected") {
         let popupTwo = document.querySelector(".popup-two")
@@ -74,21 +74,21 @@ purchasesForm.addEventListener("submit", (event) => {
     let items = document.createElement("li")
 
     if (category == "food") {
-        items.innerHTML = `${description} $${amount}`
+        items.innerHTML = `${description} $${amount.toFixed(2)}`
         console.log(items)
         foodList.append(items)
     } else if (category == "entertainment") {
-        items.innerHTML = `${description} $${amount}`
+        items.innerHTML = `${description} $${amount.toFixed(2)}`
         console.log(items)
         entertainmentList.append(items)
     }
     else if (category == "bills") {
-        items.innerHTML = `${description} $${amount}`
+        items.innerHTML = `${description} $${amount.toFixed(2)}`
         console.log(items)
         billsList.append(items)
     }
     else if (category == "clothes") {
-        items.innerHTML = `${description} $${amount}`
+        items.innerHTML = `${description} $${amount.toFixed(2)}`
         console.log(items)
         clothesList.append(items)
     }
