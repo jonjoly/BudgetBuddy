@@ -7,6 +7,7 @@ let foodTotal = document.querySelector(".food-total");
 let entertainmentTotal = document.querySelector(".entertainment-total");
 let billsTotal = document.querySelector(".bills-total");
 let clothesTotal = document.querySelector(".clothes-total");
+let tracker = document.querySelector(".tracker")
 
 let currentFood = 0;
 let currentEntertainment = 0;
@@ -29,8 +30,9 @@ budgetForm.addEventListener("submit", (event) => {
     const data = new FormData(budgetForm);
     budget = Number(data.get("budget"));
     // console.log(budget);
-    budgetTotal.innerHTML = `$${budget.toFixed(2)}`
+    budgetTotal.innerHTML = `$${budget.toFixed(2)}`;
     budgetForm.reset();
+    tracker.style.display = "flex"
     budgetForm.style.display = "none"
 })
 
@@ -39,6 +41,7 @@ purchasesForm.addEventListener("submit", (event) => {
     const data = new FormData(purchasesForm);
     amount = Number(data.get("amount"));
     let category = data.get("category");
+
 
     // console.log(amount, category)
     if (budget - amount >= 0 && category != "selected") {
@@ -94,11 +97,13 @@ purchasesForm.addEventListener("submit", (event) => {
     }
 
 })
-
+// .....................................
 let popup = document.querySelector(".popup")
 popup.addEventListener("click", (e) => {
     popup.style.display = "none"
 })
+
+
 let drops = document.querySelectorAll(".drops")
 const dropsFunc = () => {
     drops.forEach(drop => {
@@ -118,3 +123,4 @@ const dropsFunc = () => {
     })
 }
 dropsFunc();
+
