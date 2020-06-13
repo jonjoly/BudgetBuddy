@@ -3,6 +3,9 @@ body,h1,h2,h3,p{
     margin:0;
     text-align: center;
 }
+.title-header{
+    font-size: x-large;
+}
 .weekly-total{
     margin:0;
 }
