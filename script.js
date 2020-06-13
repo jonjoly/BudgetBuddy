@@ -8,6 +8,7 @@ let entertainmentTotal = document.querySelector(".entertainment-total");
 let billsTotal = document.querySelector(".bills-total");
 let clothesTotal = document.querySelector(".clothes-total");
 let tracker = document.querySelector(".tracker")
+let formContainer = document.querySelector(".form-container");
 
 let currentFood = 0;
 let currentEntertainment = 0;
@@ -34,6 +35,9 @@ budgetForm.addEventListener("submit", (event) => {
     budgetForm.reset();
     tracker.style.display = "flex"
     budgetForm.style.display = "none"
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        formContainer.style.height = "200px"
+    }
 })
 
 purchasesForm.addEventListener("submit", (event) => {
@@ -124,3 +128,22 @@ const dropsFunc = () => {
 }
 dropsFunc();
 
+let fas = document.querySelectorAll(".fas")
+const fasFunc = () => {
+    fas.forEach(drop => {
+        drop.addEventListener("click", (event) => {
+            if (event.target.classList.contains("fas")) {
+                foodList.classList.toggle("show-list")
+            } else if (event.target.classList.contains("fas")) {
+                entertainmentList.classList.toggle("show-list")
+            }
+            else if (event.target.classList.contains("fas")) {
+                billsList.classList.toggle("show-list")
+            }
+            else if (event.target.classList.contains("fas")) {
+                clothesList.classList.toggle("show-list")
+            }
+        })
+    })
+}
+fasFunc();
